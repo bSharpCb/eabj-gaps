@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <head>
+        <title>EAB Jeopardy!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="lib/utilities.js"></script>
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+      <div>
+        <div class="header"></div>
+        <div class="board">
+          <div class="row categories">
+            <div class="tile"><span class="category"><%= board[0].category %></span></div>
+            <div class="tile"><span class="category"><%= board[1].category %></span></div>
+            <div class="tile"><span class="category"><%= board[2].category %></span></div>
+            <div class="tile"><span class="category"><%= board[3].category %></span></div>
+            <div class="tile"><span class="category"><%= board[4].category %></span></div>
+          </div>
+          <div class="row clues">
+              <div class="tile" onclick="toggleActive(this)">
+                <div class="question-value">$200</div>
+                <div class="question-clue"><%= board[0].c1 %></div>
+                <div class="question-answer"><%= board[0].a1 %></div>
+              </div>
+              <div class="tile" onclick="toggleActive(this)">
+                <div class="question-value">$200</div>
+                <div class="question-clue"><%= board[1].c1 %></div>
+                <div class="question-answer"><%= board[1].a1 %></div>
+              </div>
+              <div class="tile" onclick="toggleActive(this)">
+                <div class="question-value">$200</div>
+                <div class="question-clue"><%= board[2].c1 %></div>
+                <div class="question-answer"><%= board[2].a1 %></div>
+              </div>
+              <div class="tile" onclick="toggleActive(this)">
+                <div class="question-value">$200</div>
+                <div class="question-clue"><%= board[3].c1 %></div>
+                <div class="question-answer"><%= board[3].a1 %></div>
+              </div>
+              <div class="tile" onclick="toggleActive(this)">
+                <div class="question-value">$200</div>
+                <div class="question-clue"><%= board[4].c1 %></div>
+                <div class="question-answer"><%= board[4].a1 %></div>
+              </div>
+          </div>
+          <div class="row clues">
+            <div class="tile" onclick="toggleActive(this)">
+              <div class="question-value">$400</div>
+              <div class="question-clue"><%= board[0].c2 %></div>
+              <div class="question-answer"><%= board[0].a2 %></div>
+            </div>
+            <div class="tile" onclick="toggleActive(this)">
+              <div class="question-value">$400</div>
+              <div class="question-clue"><%= board[1].c2 %></div>
+              <div class="question-answer"><%= board[1].a2 %></div>
+            </div>
+            <div class="tile" onclick="toggleActive(this)">
+              <div class="question-value">$400</div>
+              <div class="question-clue"><%= board[2].c2 %></div>
+              <div class="question-answer"><%= board[2].a2 %></div>
+            </div>
+            <div class="tile" onclick="toggleActive(this)">
+              <div class="question-value">$400</div>
+              <div class="question-clue"><%= board[3].c2 %></div>
+              <div class="question-answer"><%= board[3].a2 %></div>
+            </div>
+            <div class="tile" onclick="toggleActive(this)">
+              <div class="question-value">$400</div>
+              <div class="question-clue"><%= board[4].c2 %></div>
+              <div class="question-answer"><%= board[4].a2 %></div>
+            </div>
+        </div>
+        <div class="row clues">
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$600</div>
+            <div class="question-clue"><%= board[0].c3 %></div>
+            <div class="question-answer"><%= board[0].a3 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$600</div>
+            <div class="question-clue"><%= board[1].c3 %></div>
+            <div class="question-answer"><%= board[1].a3 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$600</div>
+            <div class="question-clue"><%= board[2].c3 %></div>
+            <div class="question-answer"><%= board[2].a3 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$600</div>
+            <div class="question-clue"><%= board[3].c3 %></div>
+            <div class="question-answer"><%= board[3].a3 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$600</div>
+            <div class="question-clue"><%= board[4].c3 %></div>
+            <div class="question-answer"><%= board[4].a3 %></div>
+          </div>
+        </div>
+        <div class="row clues">
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$800</div>
+            <div class="question-clue"><%= board[0].c4 %></div>
+            <div class="question-answer"><%= board[0].a4 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$800</div>
+            <div class="question-clue"><%= board[1].c4 %></div>
+            <div class="question-answer"><%= board[1].a4 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$800</div>
+            <div class="question-clue"><%= board[2].c4 %></div>
+            <div class="question-answer"><%= board[2].a4 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$800</div>
+            <div class="question-clue"><%= board[3].c4 %></div>
+            <div class="question-answer"><%= board[3].a4 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$800</div>
+            <div class="question-clue"><%= board[4].c4 %></div>
+            <div class="question-answer"><%= board[4].a4 %></div>
+          </div>
+        </div>
+        <div class="row clues">
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$1000</div>
+            <div class="question-clue"><%= board[0].c5 %></div>
+            <div class="question-answer"><%= board[0].a5 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$1000</div>
+            <div class="question-clue"><%= board[1].c5 %></div>
+            <div class="question-answer"><%= board[1].a5 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$1000</div>
+            <div class="question-clue"><%= board[2].c5 %></div>
+            <div class="question-answer"><%= board[2].a5 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$1000</div>
+            <div class="question-clue"><%= board[3].c5 %></div>
+            <div class="question-answer"><%= board[3].a5 %></div>
+          </div>
+          <div class="tile" onclick="toggleActive(this)">
+            <div class="question-value">$1000</div>
+            <div class="question-clue"><%= board[4].c5 %></div>
+            <div class="question-answer"><%= board[4].a5 %></div>
+          </div>
+        </div>
+
+        </div>          
+        </div>
+    </body>
+</html>
