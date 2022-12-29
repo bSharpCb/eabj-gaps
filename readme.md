@@ -15,7 +15,7 @@ J-crawl:
 - npm run tca: queries db for 5 random categories and writes to J-app/public/lib/clues.json
 
 
-Future updates:
+# Future updates:
 - user logins, allowing for users to maintain their own regex and daily boards
 - ability to update your own regex
 - tracking progress (improvement in categories, gameboard history)
