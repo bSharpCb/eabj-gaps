@@ -9,9 +9,9 @@ const g_ids = (async () => {
   const page = await browser.newPage();
   
   // earliest season to query from
-  let m = 38;
+  let m = 30;
   console.log(`Now scraping Jeopardy games beginning from season ${m}...`);
-  for (m; m<40; m++) {
+  for (m; m<39; m++) {
     await page.goto(`https://j-archive.com/showseason.php?season=${m}`);
     const season_game_ids = await page.evaluate(() => {
         const _eps = Array.from(document.querySelectorAll('#content > table > tbody > tr')).map((elem) => {
