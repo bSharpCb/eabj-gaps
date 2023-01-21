@@ -2,7 +2,11 @@ import puppeteer from 'puppeteer';
 import g_ids from './get-games.js';
 
 const _games_db = (async () => {
-  const browser = await puppeteer.launch({headless: true});
+  const browser = await puppeteer.launch(
+    {
+      headless: true,
+      args: ['--no-sandbox']
+    });
 
   const _gaps= /\bWATER|\bLAKE|\bRIVER|\bOCEAN|\bSEA|\bSTREAM|\bKING|\bQUEEN|\bROYAL|\bMONARCH|\bCROWN|\bPRINCE|\bDYNASTY|\bMYTH|\bGREEK|\bROMAN|\bNORSE|\bGOD|\bDEITY|\bDEITIES|\bCAESAR|\bDIVINE|\bWONDER|\bTAJ|\bCOLOSSEUM|\bMACHU|\bDISCOVER|\bCOMIC|\bHERO|\bGAME|\bCARTOON|\bMOVIE|\bFILM|\bGUITAR|\bTELEVISION|\bMEDIEVAL|\bART|\bPAINT|\bDRAW|\bSCULPT|\bSTATUE|\bDANCE|\bACTOR|\bACTRESS|\bACTING|\bHOUSTON|\bCHEMISTRY|\bPERIODIC|\bELEMENT/g;
 
