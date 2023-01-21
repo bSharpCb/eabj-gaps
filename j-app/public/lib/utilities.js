@@ -22,5 +22,28 @@ const toggleActive = (e) => {
       e.className = 'tile active';
     }
   }
-  
-  
+
+const toggleComments = (c) => {
+  if (c.className == 'tile active') {
+    c.className = 'tile';
+  } else if (c.className == 'tile') {
+    c.className = 'tile active';
+  }
+}  
+
+const addToScore = (m) => {
+  console.log(m);
+  const score = document.querySelector('#score');
+  const currentScore = parseInt(score.innerText.split('$')[1]);
+  const parentTile = m.parentElement.parentElement;
+  const cashValue = parseInt(parentTile.children[0].innerText.split('$')[1]);
+  score.innerText = `$${currentScore + cashValue}`;
+  m.style = 'display: none;'
+  parentTile.children[0].innerText = '';
+}
+
+const missed = (clue) => {
+  const parentTile = clue.parentElement.parentElement;
+  parentTile.children[0].innerText = '';
+  clue.style = 'display: none;'
+}
