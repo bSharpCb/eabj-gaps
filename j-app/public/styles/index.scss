@@ -4,10 +4,35 @@ body {
   margin: 0px;
 }
 
+#score {
+  float: right;
+}
+
+.btn {
+  margin-top: 50px;
+  border-radius: 50%;
+  font-size: 2vh;
+  text-align: center;
+  border: black 5px solid;
+  padding: 10px;
+}
+
+.plus {
+  background-color: green;
+}
+
+.missed {
+  background-color: red;
+}
+
 .header {
   height: 10vh;
   width: 100%;
   background-color: black;
+  color: azure;
+  font-size: 4vh;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
 }
 
 .board {
@@ -48,6 +73,12 @@ body {
       text-align: center;
       font-size: 1.69vh;
       line-height: 1.35;
+      display: block;
+    }
+
+    .comments {
+      display: none;
+      font-size: 3vh;
     }
     
     .question-value {
@@ -74,6 +105,14 @@ body {
       right: 0px;
       z-index: 5;
       
+      .category {
+        display: none;
+      }
+
+      .comments {
+        display: block;
+      }
+
       .question-value {
         display: none;
       }
