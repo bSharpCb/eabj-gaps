@@ -3,8 +3,11 @@
 import puppeteer from 'puppeteer';
 
 const g_ids = (async () => {
-  const browser = await puppeteer.launch({headless: true}
-  );
+  const browser = await puppeteer.launch(
+    {
+      headless: true,
+      args: ['--no-sandbox']
+    });
   const game_ids = [];
   const page = await browser.newPage();
   
